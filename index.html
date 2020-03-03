@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+<meta charset="UTF-8">
+<title>gryph</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="css/preloader.css" rel="stylesheet">
+<link href="css/highstl.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/Shacke.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="js/jquery.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/kill.js"></script>
+<style>
+@font-face{font-family:Pompadur;src:url(fonts/font.html);src:local(pompadur),url(fonts/font.ttf);}h1{font-family:Pompadur,'Comic Sans MS',cursive;}
+@font-face{font-family:Bazy;src:url(fonts/bazy.html);src:local(bazy),url(fonts/bazy.ttf);}
+body, a, a:link{cursor:url(images/cursor/cursor.cur), default;} a:hover {cursor:url(images/cursor/cursor2.cur),pointer;}
+</style>
+<div id="loader-wrapper"><div id="loader"></div>
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div> 
+</div>
+</head>
+<body onmousedown="return false" onselectstart="return false">
+<style>body{overflow:hidden}</style>
+<script>disableWheelScroll();</script>
+<div id="clockbox"></div>
+<script type="text/javascript">
+function GetClock(){
+var d=new Date();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var clocktext=""+nhour+":"+nmin+":"+nsec+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+<div id="star" class="video mask overlay">
+<i class="volume-button fa fa-volume-up"></i>
+<i class="stop-button fa fa-pause"></i>
+<div class="video-fallback"></div>
+<video id="video" onloadstart="this.volume=0.3" loop="">
+<source src="videos/xx.mp4" type="video/mp4"></source>
+</video>
+<script>setTimeout(function(){document.getElementById("video").play();}, 3000);</script>
+<canvas class="cover"></canvas>
+</div>
+<div class="kill-feed"><div><span class="player t"></span><span class="weapons"><img height="20"><img width="30" height="26" src="images/headshot.png"></span><span class="player ct"></span></div></div>
+
+<div class="pageoverlay">
+<div class="lightbox">
+<div class="awrapper">
+<div class="titles animated rubberBand" style="animation-delay: 6s;">
+<div class="animated zoomIn" style="animation-delay: 4s;">
+<h1><font color="#00FFFF"></font><font color="#FFFFFF">gryph</font></h1>
+</div></div>
+<div class="media animated fadeInUpBig" style="animation-delay: 5s;">
+<a href="https://www.youtube.com/channel/UC9G7kqa9xR27wzFh7EfjLpw?confirm_subscription=" target="_blank">
+<i class="fab fa-youtube hvr-grow" title="YouTube"></i> 
+<a href="https://www.instagram.com/imgryph" target="_blank">
+<i class="fab fa-instagram hvr-grow" title="Instagram"></i>
+<a href="https://discord.gg/kjegdQ" target="_blank">
+<i class="fab fa-discord hvr-grow" title="Discord"></i>
+<a href="" target="_blank">
+<i class="fas fa-comment-alt hvr-grow" title="Games"></i>
+<a href="https://gryph.000webhostapp.com/games" target="_blank">
+<i class="fas fa-store hvr-grow" title="Shop"></i>
+</a>
+</div>
+</div>
+</div></div>
+<div class="pagebottom">
+<center>
+</center>
+</div>
+<script>$(document).ready(function() {setTimeout(function(){$('body').addClass('loaded');$('h1').css('color','#222222');}, 2500);});</script>
+</body>
+
+</html>
